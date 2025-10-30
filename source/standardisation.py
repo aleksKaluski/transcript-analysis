@@ -80,7 +80,8 @@ def replace_numbers_with_words(nlp, input_text: str) -> str:
 
 def replace_unwanted_signs(csv_file, new_csv_file):
     nlp = spacy.load("pl_core_news_sm")
-    with open(csv_file, "r", encoding='utf-8') as source, open(new_csv_file, "w", encoding='utf-8') as target:
+    with open(csv_file, "r", encoding='utf-8', newline='') as source, \
+            open(new_csv_file, "w", encoding='utf-8', newline='') as target:
         # print(f"input file: {csv_file}")
 
         try:
